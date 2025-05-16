@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rosbeat"
+version = "0.1.0"
+description = "A Filebeat-like log ingester for ROS log files into Elasticsearch"
+authors = [
+    {name = "Pranava Swaroopa", email = "ppswaroopa@gmail.com"}
+]
+license = {text = "GPL-3.0"}
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "elasticsearch>=8.0.0",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+rosbeat = "rosbeat.main:main"
